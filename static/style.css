@@ -1,0 +1,28 @@
+.add {
+    background-color: rgba(29, 108, 47, 0.4);
+}
+
+.delete {
+    background-color: rgba(230, 75, 75, 0.4);
+}
+
+.edit {
+    background-color: rgb(93, 112, 218, .3);
+}
+
+.navbar {
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #212529;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: #212529;
+  text-decoration: none;
+  margin-left: 10px;
+}

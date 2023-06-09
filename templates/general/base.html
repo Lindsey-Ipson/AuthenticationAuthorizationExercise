@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="navbar-brand" href="/">Flask Feedback</a>
+  {% if 'username' in session %}
+  <a class="nav-link" href="/logout">Logout</a>
+  {% else %}
+  <a class="nav-link" href="/login">Login</a>
+  {% endif %}
+</nav>
+
+<div class="flash-messages">
+    {% for msg in get_flashed_messages() %}
+    <p class="msg">{{msg}}</p>
+    {% endfor %}
+</div>
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>
